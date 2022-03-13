@@ -12,6 +12,12 @@ NAVER
 <form action="searchNews">
 	<input type ="text" name ="keyword">
 </form>
+<ul>
+	<li><a>뉴스</a></li>
+	<li><a>부동산</a></li>
+	<li><a>웹툰</a></li>
+	<li><a>쇼핑</a></li>
+</ul>
 </div>
 </body>
 </html>
