@@ -13,14 +13,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import kr.ac.kopo.model.News;
+
 @Controller
 public class ApiExamSearchBlogController {
 
 	@GetMapping("/searchNews")
 	public String search(Model model, String keyword) {
 		
-		 String clientId = ""; //애플리케이션 클라이언트 아이디값"
-	     String clientSecret = ""; //애플리케이션 클라이언트 시크릿값"
+		 String clientId = "l2fy9TUiFsAiFC6k1uIt"; //애플리케이션 클라이언트 아이디값"
+	     String clientSecret = "kKINwY6A1e"; //애플리케이션 클라이언트 시크릿값"
 
 	     String text = null;
 	     try {
@@ -38,7 +44,22 @@ public class ApiExamSearchBlogController {
 	     String responseBody = get(apiURL,requestHeaders);
 
 	     System.out.println(responseBody);
-	 
+	     ObjectMapper mapper = new ObjectMapper();
+	     News news;
+		try {			
+			news = mapper.readValue(responseBody, News.class);
+			System.out.println(news);
+		} catch (JsonParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	     
 		model.addAttribute("responseBody",responseBody);
 		return "result";
 	}
@@ -91,4 +112,5 @@ public class ApiExamSearchBlogController {
          throw new RuntimeException("API 응답을 읽는데 실패했습니다.", e);
      }
  }
+ 
 }
