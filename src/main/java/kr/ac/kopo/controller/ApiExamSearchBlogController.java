@@ -17,12 +17,13 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import kr.ac.kopo.model.Img;
 import kr.ac.kopo.model.News;
 
 @Controller
 public class ApiExamSearchBlogController {
 
-	@GetMapping("/searchNews")
+	@GetMapping("/search")
 	public String search(Model model, String keyword) {
 		
 		 String clientId = "l2fy9TUiFsAiFC6k1uIt"; //애플리케이션 클라이언트 아이디값"
@@ -48,7 +49,8 @@ public class ApiExamSearchBlogController {
 	     News news;
 		try {			
 			news = mapper.readValue(responseBody, News.class);
-			System.out.println(news);
+			System.out.println(news.getTotal());
+			model.addAttribute("news",news);
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,7 +62,50 @@ public class ApiExamSearchBlogController {
 			e.printStackTrace();
 		}
 	     
-		model.addAttribute("responseBody",responseBody);
+		return "result";
+	}
+	
+	@GetMapping("/searchImg")
+	public String searchImg(Model model, String keyword) {
+		
+		 String clientId = "l2fy9TUiFsAiFC6k1uIt"; //애플리케이션 클라이언트 아이디값"
+	     String clientSecret = "kKINwY6A1e"; //애플리케이션 클라이언트 시크릿값"
+
+	     String text = null;
+	     try {
+	         text = URLEncoder.encode(keyword, "UTF-8");
+	     } catch (UnsupportedEncodingException e) {
+	         throw new RuntimeException("검색어 인코딩 실패",e);
+	     }
+
+	     String apiURL = "	https://openapi.naver.com/v1/search/image?query=" + text;    // json 결과
+	     //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
+
+	     Map<String, String> requestHeaders = new HashMap<>();
+	     requestHeaders.put("X-Naver-Client-Id", clientId);
+	     requestHeaders.put("X-Naver-Client-Secret", clientSecret);
+	     String responseBody = get(apiURL,requestHeaders);
+
+	     System.out.println(responseBody);
+	     ObjectMapper mapper = new ObjectMapper();
+	     Img imgs;
+		try {			
+			imgs = mapper.readValue(responseBody, Img.class);
+			System.out.println(imgs.getTotal());
+			model.addAttribute("imgs",imgs);
+		} catch (JsonParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	     
+		model.addAttribute("keyword",keyword);
+		
 		return "result";
 	}
 
