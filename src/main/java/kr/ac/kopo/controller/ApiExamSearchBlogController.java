@@ -79,20 +79,27 @@ public class ApiExamSearchBlogController {
 	     }
 
 	     String apiURL = "	https://openapi.naver.com/v1/search/image?query=" + text;    // json 결과
+	     String apiURLNews = "https://openapi.naver.com/v1/search/news.json?query=" + text;    // json 결과
 	     //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
 
 	     Map<String, String> requestHeaders = new HashMap<>();
 	     requestHeaders.put("X-Naver-Client-Id", clientId);
 	     requestHeaders.put("X-Naver-Client-Secret", clientSecret);
 	     String responseBody = get(apiURL,requestHeaders);
-
+	     String responseBody2 = get(apiURLNews,requestHeaders);
+	     
 	     System.out.println(responseBody);
+	     System.out.println(responseBody2);
+	     
 	     ObjectMapper mapper = new ObjectMapper();
 	     Img imgs;
+	     News news;
 		try {			
 			imgs = mapper.readValue(responseBody, Img.class);
+			news = mapper.readValue(responseBody2, News.class);
 			System.out.println(imgs.getTotal());
 			model.addAttribute("imgs",imgs);
+			model.addAttribute("news",news);
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
