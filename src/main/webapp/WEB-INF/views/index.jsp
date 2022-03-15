@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-NAVER
+Napriny
 <!-- search 하면 뉴스, 블로그, 백과사전, 이미지, 쇼핑 -->
 <form action="search">
 	<input type ="text" name ="keyword">
