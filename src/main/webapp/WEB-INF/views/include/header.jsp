@@ -37,12 +37,11 @@ button {
 </style>
 <header>
  <ul>
-	  <li><a href="/"><img src="/resources/images/apple-logo.png" alt="로고"></a></li>
-	  <li><a href="/store/list">뉴스</a></li>
-	  <li><a href="/store/mac">블로그</a></li>
-	  <li><a href="/store/ipad">백과사전</a></li>
-	  <li><a href="/store/iphone">이미지</a></li>
-	  <li><a href="/store/watch">쇼핑</a></li>
+	  <li><a href="/">Napriny</a></li>
+	  <li><a href="javascript:alert('개발중인 기능입니다.')">뉴스</a></li>
+	  <li><a href="javascript:alert('개발중인 기능입니다.')">블로그</a></li>
+	  <li><a href="javascript:alert('개발중인 기능입니다.')">백과사전</a></li>
+	  <li><a href="javascript:alert('개발중인 기능입니다.')">이미지</a></li>
 	  <li><a href="javascript:alert('개발중인 기능입니다.')">고객지원</a></li>
 	  <li><a href="javascript:alert('개발중인 기능입니다.')"><img src="/resources/images/search.png" alt="검색"></a></li>
  </ul>

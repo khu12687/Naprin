@@ -17,12 +17,13 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import kr.ac.kopo.model.Encyc;
 import kr.ac.kopo.model.Img;
 import kr.ac.kopo.model.News;
 
 @Controller
 public class ApiExamSearchBlogController {
-
+	
 	@GetMapping("/search")
 	public String search(Model model, String keyword) {
 		
@@ -36,70 +37,29 @@ public class ApiExamSearchBlogController {
 	         throw new RuntimeException("검색어 인코딩 실패",e);
 	     }
 
-	     String apiURL = "https://openapi.naver.com/v1/search/news.json?query=" + text;    // json 결과
-	     //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
-
-	     Map<String, String> requestHeaders = new HashMap<>();
-	     requestHeaders.put("X-Naver-Client-Id", clientId);
-	     requestHeaders.put("X-Naver-Client-Secret", clientSecret);
-	     String responseBody = get(apiURL,requestHeaders);
-
-	     System.out.println(responseBody);
-	     ObjectMapper mapper = new ObjectMapper();
-	     News news;
-		try {			
-			news = mapper.readValue(responseBody, News.class);
-			System.out.println(news.getTotal());
-			model.addAttribute("news",news);
-		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	     
-		return "result";
-	}
-	
-	@GetMapping("/searchImg")
-	public String searchImg(Model model, String keyword) {
-		
-		 String clientId = "l2fy9TUiFsAiFC6k1uIt"; //애플리케이션 클라이언트 아이디값"
-	     String clientSecret = "kKINwY6A1e"; //애플리케이션 클라이언트 시크릿값"
-
-	     String text = null;
-	     try {
-	         text = URLEncoder.encode(keyword, "UTF-8");
-	     } catch (UnsupportedEncodingException e) {
-	         throw new RuntimeException("검색어 인코딩 실패",e);
-	     }
-
 	     String apiURL = "	https://openapi.naver.com/v1/search/image?query=" + text;    // json 결과
 	     String apiURLNews = "https://openapi.naver.com/v1/search/news.json?query=" + text;    // json 결과
-	     //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
+	     String apiURLEncyc = "https://openapi.naver.com/v1/search/encyc.json?query=" + text;    // json 결과
 
 	     Map<String, String> requestHeaders = new HashMap<>();
 	     requestHeaders.put("X-Naver-Client-Id", clientId);
 	     requestHeaders.put("X-Naver-Client-Secret", clientSecret);
 	     String responseBody = get(apiURL,requestHeaders);
 	     String responseBody2 = get(apiURLNews,requestHeaders);
-	     
-	     System.out.println(responseBody);
-	     System.out.println(responseBody2);
+	     String responseBody3 = get(apiURLEncyc,requestHeaders);
+	     System.out.println(responseBody3);
 	     
 	     ObjectMapper mapper = new ObjectMapper();
 	     Img imgs;
 	     News news;
+	     Encyc encyc;
 		try {			
 			imgs = mapper.readValue(responseBody, Img.class);
 			news = mapper.readValue(responseBody2, News.class);
-			System.out.println(imgs.getTotal());
+			encyc = mapper.readValue(responseBody3, Encyc.class);
 			model.addAttribute("imgs",imgs);
 			model.addAttribute("news",news);
+			model.addAttribute("encyc",encyc);
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
