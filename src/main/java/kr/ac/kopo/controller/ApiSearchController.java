@@ -22,7 +22,7 @@ import kr.ac.kopo.model.Img;
 import kr.ac.kopo.model.News;
 
 @Controller
-public class ApiExamSearchBlogController {
+public class ApiSearchController {
 	
 	@GetMapping("/search")
 	public String search(Model model, String keyword) {

@@ -2,18 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/resources/css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <style>
 a{
 	text-decoration: none;
-}
-input[type=button] {
-  background-color: #1567F9;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+	color: blue;
 }
 
 input[type=submit] {
@@ -25,13 +19,59 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.nav{
+	width: 50%;
+	margin: 10%;
+	border : 1px solid gray;
+	border-radius: 8px;
+}
+
+input[type=button] {
+  background-color: #1567F9;
+  width: 100px;
+  height: 50px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
 input[type=button]:hover {
   background-color: #096CDF;
 }
+* {
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+	color: black;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+header {
+  display: block;
+  background: #333333;
+  width: 100%;
+  height:60px;
+  white-space : nowrap;
+  overflow : hidden;
+  position: fixed;
+  text-overflow : ellipsis;
+  top: 0;
+}
 
-button {
-	background-color: #096CDF;
-	border: 1px;
+header ul {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul li {
+	margin: .5rem 2.5rem;
+}
+header ul li a {
+	color: #cbcbcb;
+	font-size: 13px;
+	text-decoration: none;
 }
 </style>
 <header>

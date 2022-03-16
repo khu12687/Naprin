@@ -8,39 +8,13 @@
 <title>Napriny</title>
 <jsp:include page="./include/header.jsp"></jsp:include>
 <style>
-*{
-	color: black;
-	font-family: sans-serif;
-}
-a{
-	color: blue;
-}
-.nav{
-	width: 50%;
-	margin: 10%;
-	border : 1px solid gray;
-	border-radius: 8px;
-}
 
-input[type=button] {
-  background-color: #1567F9;
-  width: 100px;
-  height: 50px;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-input[type=button]:hover {
-  background-color: #096CDF;
-}
 </style>
 </head>
 <body>
 	<div>
 		<div class="nav">
-			<h1>지식iN</h1><a href="">지식iN에 물어보기</a>
+			<h1>지식iN</h1><a href="knowIn?keyword=${keyword }">지식iN에 물어보기</a>
 		</div>
 		
 		<div class="nav">
