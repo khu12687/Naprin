@@ -1,6 +1,7 @@
 package kr.ac.kopo.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Knowin {
 	private int know_id;
@@ -9,6 +10,14 @@ public class Knowin {
 	private int hit;
 	private Date regdate;
 	private String id;
+	private List<ProductImage> images;
+	
+	public List<ProductImage> getImages() {
+		return images;
+	}
+	public void setImages(List<ProductImage> images) {
+		this.images = images;
+	}
 	public int getKnow_id() {
 		return know_id;
 	}

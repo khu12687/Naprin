@@ -14,7 +14,7 @@
 <body>
 	<div>
 		<div class="nav">
-			<h1>지식iN</h1><a href="knowIn?keyword=${keyword }">지식iN에 물어보기</a>
+			<h1>지식iN</h1><a href="knowIn/add?keyword=${keyword }">지식iN에 물어보기</a>
 		</div>
 		
 		<div class="nav">
