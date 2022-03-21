@@ -4,25 +4,26 @@ import java.util.Date;
 import java.util.List;
 
 public class Knowin {
-	private int know_id;
+	private int knowId;
 	private String title;
 	private String content;
 	private int hit;
 	private Date regdate;
 	private String id;
-	private List<ProductImage> images;
+	private List<KnowinImg> images;
 	
-	public List<ProductImage> getImages() {
+	public List<KnowinImg> getImages() {
 		return images;
 	}
-	public void setImages(List<ProductImage> images) {
+	public void setImages(List<KnowinImg> images) {
 		this.images = images;
 	}
-	public int getKnow_id() {
-		return know_id;
+	
+	public int getKnowId() {
+		return knowId;
 	}
-	public void setKnow_id(int know_id) {
-		this.know_id = know_id;
+	public void setKnowId(int knowId) {
+		this.knowId = knowId;
 	}
 	public String getTitle() {
 		return title;

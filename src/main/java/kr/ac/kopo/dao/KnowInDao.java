@@ -1,11 +1,11 @@
-package kr.ac.kopo.service;
+package kr.ac.kopo.dao;
 
 import kr.ac.kopo.model.Knowin;
 
-public interface KnowinService {
+public interface KnowInDao {
 
 	void update(Knowin item);
 
 	void add(Knowin item);
-
+	
 }

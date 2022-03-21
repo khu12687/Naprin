@@ -10,7 +10,7 @@ a{
 	color: blue;
 }
 
-input[type=submit] {
+button {
   background-color: #1567F9;
   width: 70px;
   height: 30px;

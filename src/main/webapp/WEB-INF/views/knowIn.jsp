@@ -48,22 +48,22 @@
 </head>
 <body>
 	<div class="nav">
-		<div style="float: left;">			
-			<h3><label for="title"><img src="https://ssl.pstatic.net/static/kin/09renewal/h_question.gif" width="64" height="30" alt="질문"></label></h3>
-		</div>
-	<form method="post" action="add" class="mt-4" enctype="multipart/form-data">
-		<input type="hidden" name="hit" value="5">
-		<!-- 인풋박스에 포커싱 갈 경우 on_focus 클래스 추가 -->
-		<input type="text" name="title" id="title" maxlength="80" class="txt_type on_focus" size="90" placeholder="${keyword }에 대한 정확한 답변을 원하시나요? 궁금한 점을 바로 알 수 있도록 작성해 보세요." style="color:#333; margin-top: 2px; margin-left: 1%;" >	
+		<form method="post" action="/knowIn/add" class="mt-4" enctype="multipart/form-data">
+			<div style="float: left;">			
+				<h3><label for="title"><img src="https://ssl.pstatic.net/static/kin/09renewal/h_question.gif" width="64" height="30" alt="질문"></label></h3>
+			</div>
+			<input type="hidden" name="hit" value="5">
+			<!-- 인풋박스에 포커싱 갈 경우 on_focus 클래스 추가 -->
+			<input type="text" name="title" id="title" maxlength="80" size="90" placeholder="${keyword }에 대한 정확한 답변을 원하시나요? 궁금한 점을 바로 알 수 있도록 작성해 보세요." style="color:#333; margin-top: 2px; margin-left: 1%;" >	
 		 	<div class="mb-3"> 
 				<textarea name="content"></textarea>
 		 	</div>
 		 	<div class="mb-3"> 
 				<label class="form-label">파일 첨부</label><span id="add_image">추가</span>
-		 		<input type="file" name="productImage" class="form-control">
+		 		<input type="file" name="knowinImg" class="form-control">
 		 	</div>
 			<div style="float: right;">
-			 	<input type = "submit" value = "작성">
+			 	<button>작성</button>
 			 	<a href="../">작성취소</a>
 			</div>
 		</form>

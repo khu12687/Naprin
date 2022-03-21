@@ -1,4 +1,4 @@
-package kr.ac.kopo.smartshop.util;
+package kr.ac.kopo.util;
 
 public interface UploadFile {
 

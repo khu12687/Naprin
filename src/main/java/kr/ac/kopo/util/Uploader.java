@@ -1,4 +1,4 @@
-package kr.ac.kopo.smartshop.util;
+package kr.ac.kopo.util;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.UUID;
 import org.springframework.web.multipart.MultipartFile;
 
 public class Uploader<T extends UploadFile> {
-	final String uploadPath = "/Users/Desktop/lecture/upload/";
+	final String uploadPath = "/D:upload/";
 
 	public List<T> makeList(List<MultipartFile> files, Class<T> type) throws Exception{
 		

@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.ac.kopo.model.Knowin;
-import kr.ac.kopo.model.ProductImage;
+import kr.ac.kopo.model.KnowinImg;
 import kr.ac.kopo.service.KnowinService;
-import kr.ac.kopo.smartshop.util.Uploader;
+import kr.ac.kopo.util.Uploader;
 
 @Controller
 @RequestMapping("/knowIn")
@@ -24,7 +24,7 @@ public class KnowInController {
 	KnowinService service;
 	
 	@GetMapping("/add")
-	public String knowIn(Model model, String keyword) {
+	public String add(Model model, String keyword) {
 		
 		model.addAttribute("keyword",keyword);
 		
@@ -32,17 +32,18 @@ public class KnowInController {
 	}
 	
 	@PostMapping("/add")
-	public String add(Knowin item, @RequestParam("productImage") List<MultipartFile> productImage) {
+	public String add(Knowin item, @RequestParam("knowinImg") List<MultipartFile> knowinImg) {
 		System.out.println(item.getHit());
 		System.out.println(item.getTitle());
 		System.out.println(item.getContent());
-		System.out.println(item.getImages());
+		System.out.println(knowinImg);
 		try {
-			Uploader<ProductImage> uploader = new Uploader<>();
+			Uploader<KnowinImg> uploader = new Uploader<>();
 			
-			List<ProductImage> images = uploader.makeList(productImage, ProductImage.class);
+			List<KnowinImg> images = uploader.makeList(knowinImg, KnowinImg.class);
 			
 			item.setImages(images);
+			System.out.println(item.getImages());
 			
 			service.update(item);
 		} catch (Exception e) {
