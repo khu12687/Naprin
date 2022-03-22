@@ -1,24 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type= "text/css" href="resources/css/style.css">
+</head>
+  <title>NAPRIN</title>
 </head>
 <body>
-<div>
-Napriny
-<!-- search 하면 뉴스, 블로그, 백과사전, 이미지, 쇼핑 -->
-<form action="search">
-	<input type ="text" name ="keyword">
-</form>
-<!-- 뉴스 클릭하면 뉴스관한 정보 나오게 쇼핑 클릭하면 쇼핑관한 정보 나오게 일단 뉴스 나오게 -->
-<ul>
-	<li><a>뉴스</a></li>
-	<li><a>지도api</a></li>
-	<li>날씨(날씨api)</li>
+  <div class ="wrap">
+  <div>
+  <ul class="nav">
+    <li><a href="#">LOGIN</a></li>
 </ul>
+</div>
+  <h1>
+    <div class="logo">NAPRIN</div>
+  </h1>
+  <form>
+    <div class="search">
+      <div class ="search-box">
+        <img src="images/logo1.png">
+      <input type="search" placeholder="검색어를 검색해 주세요">
+     
+      
+     </div>
+  </div>
+  </form>
 </div>
 </body>
 </html>
