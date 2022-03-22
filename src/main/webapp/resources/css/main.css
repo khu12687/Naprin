@@ -9,6 +9,20 @@
     background-color: fbfbfb;
     }
 
+    body{
+        background-image: url("images/bg.jpg");
+        width: 100%;
+        height:1000px;
+        background-size: cover;
+
+    }
+
+    .wrap{
+        width: 1024px;
+        height: 1200px;
+        margin-left: 23%;   
+    }
+
     .search {
         text-align: center;
         display: flex;
@@ -36,9 +50,9 @@
         border: none;
         font-size: 16px;
         top: 60px;
-        padding-left: 30px;
+        padding-left: 60px;
         color: white;
-        margin-left: 50px;
+        margin-left: -30px;
     }
 
     .logo {
@@ -49,7 +63,46 @@
         font-size: 48px;
     }
 
-    .icon-image{
-        margin-top: 250px;
+    .nav li {
+      
+        font-weight: 600;
+        margin-top: 10px;  
+        
     }
-    .
+    .nav li a {
+      margin-top: 30%;  
+      margin-left: 80%;
+         
+  }
+    .nav li a :hover{
+      cursor: pointer;      
+  }
+    
+    .mlogo {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 31.5%;
+        margin-top: 140px;
+        text-align: center;
+        margin-left: 35PX;
+    }
+
+    ::-webkit-input-placeholder {
+        color: white;
+        font-weight: 300;
+    }
+    
+
+
+
+    .icon-images{
+        margin-top: 250px;
+        display: flex;
+        font-weight: 500;
+    }
+    
+    .icon-image{
+        width: 75px;
+        height: 75px;
+    }
