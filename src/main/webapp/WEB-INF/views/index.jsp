@@ -16,25 +16,41 @@
   <title>NAPRIN</title>
 </head>
 <body>
-  <div class ="wrap">
-  <div>
-  <ul class="nav">
-    <li><a href="#">LOGIN</a></li>
-</ul>
-</div>
   <h1>
     <div class="logo">NAPRIN</div>
   </h1>
   <form>
     <div class="search">
       <div class ="search-box">
-        <img src="images/logo1.png">
-      <input type="search" placeholder="검색어를 검색해 주세요">
-     
-      
+      <input type="search" placeholder="검색어를 검색해 주세요" >
      </div>
+
+     <div>
+     <div class="icon-image">
+       <a href="http://www.naver.com"><a href=""><img src="image/covid.png"></a>
+       <a href=""><img src="image/news.png"></a>
+       <a href=""><img src="image/weather.png"></a>
+       <a href=""><img src="image/image.png"></a>
+       <a href=""><img src="image/q&a.png"></a>
+       <a href=""><img src="image/map.png"></a>
+       <a href=""><img src="image/dictionary.png"></a>
+       <a href=""><img src="image/shopping.png"></a>
+     </div>
+      <h3>
+        covid19 <
+        뉴스
+        날씨
+        이미지
+        지식인
+        지도
+        사전
+      </h3>
+     <div>
+    </div>
+
+     </div>
+
   </div>
   </form>
-</div>
 </body>
-</html>
+</html> 
