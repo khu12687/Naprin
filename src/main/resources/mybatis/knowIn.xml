@@ -5,7 +5,7 @@
 	
 	<insert id="add">
 		INSERT INTO knowin
-		VALUES (NULL, #{title}, #{content})
+		VALUES (NULL, #{title}, #{content}, #{hit}, NOW(), #{id})
 		<selectKey keyProperty="knowId" resultType="Integer" order="AFTER">
 			SELECT LAST_INSERT_ID()
 		</selectKey>

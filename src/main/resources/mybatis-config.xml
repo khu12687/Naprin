@@ -12,6 +12,6 @@
 	
 	<mappers>
 		<mapper resource="mybatis/knowIn.xml"/>
-		<mapper resource="mybatis/knowinImg.xml"/>
+		<mapper resource="mybatis/knowin_img.xml"/>
 	</mappers>
 </configuration>

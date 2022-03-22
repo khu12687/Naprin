@@ -15,6 +15,10 @@
 	<div>
 		<div class="nav">
 			<h1>지식iN</h1><a href="knowIn/add?keyword=${keyword }">지식iN에 물어보기</a>
+			<div>
+				블라블라...
+				<input type="button" value="더보기->">
+			</div>
 		</div>
 		
 		<div class="nav">

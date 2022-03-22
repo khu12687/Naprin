@@ -3,7 +3,7 @@
 
 <mapper namespace="knowinImg">
 	<insert id="add">
-		INSERT INTO knowinImg
-		VALUES (NULL, #{filename}, #{uuid}, #{knowId})
+		INSERT INTO knowin_img
+		VALUES (NULL, #{knowId}, #{filename}, #{uuid} )
 	</insert>
 </mapper>

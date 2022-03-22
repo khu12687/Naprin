@@ -33,19 +33,15 @@ public class KnowInController {
 	
 	@PostMapping("/add")
 	public String add(Knowin item, @RequestParam("knowinImg") List<MultipartFile> knowinImg) {
-		System.out.println(item.getHit());
-		System.out.println(item.getTitle());
-		System.out.println(item.getContent());
-		System.out.println(knowinImg);
+		
 		try {
 			Uploader<KnowinImg> uploader = new Uploader<>();
 			
 			List<KnowinImg> images = uploader.makeList(knowinImg, KnowinImg.class);
 			
 			item.setImages(images);
-			System.out.println(item.getImages());
 			
-			service.update(item);
+			service.add(item);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -29,7 +29,7 @@
 			const div = $("<div>").addClass("mb-3");
 			const label = $("<label>").addClass("form-label").text("파일 첨부");
 			const button = $("<span>").addClass("deleteBtn").text("삭제");
-			const file = $("<input>").attr("type", "file").attr("name", "productImage").addClass("form-control");
+			const file = $("<input>").attr("type", "file").attr("name", "knowinImg").addClass("form-control");
 			
 			div.append(label);
 			div.append(button);

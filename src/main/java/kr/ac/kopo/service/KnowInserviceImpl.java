@@ -25,7 +25,6 @@ public class KnowInserviceImpl implements KnowinService{
 		
 		for(KnowinImg image : item.getImages()) {
 			image.setKnowId(item.getKnowId());
-
 			knowinImgDao.add(image);
 			
 		}
