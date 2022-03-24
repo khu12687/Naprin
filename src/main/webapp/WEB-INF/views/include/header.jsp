@@ -75,7 +75,7 @@ header ul {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/resources/images/ㅇㅇㅇㅇㅇ.PNG" alt="" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
+                <img src="/resources/css/images/logo1.png" alt="" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
                 <strong><a class="main" href="/">NAPRIN</a></strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
