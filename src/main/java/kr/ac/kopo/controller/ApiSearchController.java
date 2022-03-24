@@ -7,9 +7,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -19,10 +22,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import kr.ac.kopo.model.Encyc;
 import kr.ac.kopo.model.Img;
+import kr.ac.kopo.model.Knowin;
 import kr.ac.kopo.model.News;
+import kr.ac.kopo.service.KnowinService;
 
 @Controller
 public class ApiSearchController {
+	
+	@Autowired
+	KnowinService service;
 	
 	@GetMapping("/search")
 	public String search(Model model, String keyword) {
@@ -71,7 +79,10 @@ public class ApiSearchController {
 			e.printStackTrace();
 		}
 	     
+		List<Knowin> list =  service.list();
+		
 		model.addAttribute("keyword",keyword);
+		model.addAttribute("list",list);
 		
 		return "result";
 	}

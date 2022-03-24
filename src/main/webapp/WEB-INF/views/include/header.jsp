@@ -2,6 +2,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/resources/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <style>
@@ -51,9 +54,7 @@ input[type=button]:hover {
 }
 header {
   display: block;
-  background: #333333;
   width: 100%;
-  height:60px;
   white-space : nowrap;
   overflow : hidden;
   position: fixed;
@@ -66,27 +67,39 @@ header ul {
     align-items: center;
     justify-content: center;
 }
-header ul li {
-	margin: .5rem 2.5rem;
-}
-header ul li a {
-	color: #cbcbcb;
-	font-size: 13px;
-	text-decoration: none;
-}
+
+
 </style>
 <header>
-	 <ul>
-		<li><a href="/">Napriny</a></li>
-		<li>
-			<form action="/search">
-				<input style="margin-top: 5%" type="text" value="${keyword }" name ="keyword">
-			</form>
-		</li>
-		<li><a href="javascript:alert('개발중인 기능입니다.')">뉴스</a></li>
-		<li><a href="javascript:alert('개발중인 기능입니다.')">블로그</a></li>
-		<li><a href="javascript:alert('개발중인 기능입니다.')">백과사전</a></li>
-		<li><a href="javascript:alert('개발중인 기능입니다.')">이미지</a></li>
-		<li><a href="javascript:alert('개발중인 기능입니다.')">고객지원</a></li>
-	</ul>
+ <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/resources/images/ㅇㅇㅇㅇㅇ.PNG" alt="" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
+                <strong><a class="main" href="/">NAPRIN</a></strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                    <li class="nav-item">
+                       <input  style="margin-top: 5%" type="text" value="${keyword }" name ="keyword">
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                 	<li class="nav-item">
+				    	 <a class="nav-link" href="servepage/login"></a>
+                    </li>
+                    <li class="nav-item">
+                       	<a class="nav-link" href="member/regist">회원가입</a>
+                    </li>
+                    <li class="nav-item">
+				    	 <a class="nav-link" href="servepage/login">로그인</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>

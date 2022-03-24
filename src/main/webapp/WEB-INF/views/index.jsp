@@ -19,10 +19,10 @@
   <h1>
     <div class="logo">NAPRIN</div>
   </h1>
-  <form>
+  <form action="search">
     <div class="search">
       <div class ="search-box">
-      <input type="search" placeholder="검색어를 검색해 주세요" >
+      <input type="search" placeholder="검색어를 검색해 주세요" name="keyword" >
      </div>
 
      <div>

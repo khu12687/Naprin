@@ -3,6 +3,10 @@
 
 <mapper namespace="knowIn">
 	
+	<select id="list" resultType="Knowin">
+		SELECT * FROM knowin
+	</select>
+	
 	<insert id="add">
 		INSERT INTO knowin
 		VALUES (NULL, #{title}, #{content}, #{hit}, NOW(), #{id})
