@@ -15,12 +15,13 @@ a{
 
 button {
   background-color: #1567F9;
-  width: 70px;
-  height: 30px;
-  color: white;
-  border: none;
+  width: 50px;
+  height: 20px;
+  color: skyblue;
+  border: 1px soild skyblue;
   border-radius: 12px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .nav{
@@ -32,12 +33,13 @@ button {
 
 input[type=button] {
   background-color: #1567F9;
-  width: 100px;
-  height: 50px;
-  color: white;
-  border: none;
+  width: 60px;
+  height: 30px;
+  color: skyblue;
+  border: 1px soild skyblue;
   border-radius: 12px;
   cursor: pointer;
+  padding: 5px;
 }
 
 input[type=button]:hover {
@@ -76,7 +78,7 @@ header ul {
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img src="/resources/css/images/logo1.png" alt="" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
-                <strong><a class="main" href="/">NAPRIN</a></strong>
+                <strong style="margin-right: 3%;"><a class="main" href="/">NAPRIN</a></strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,7 +86,7 @@ header ul {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-0 mb-lg-0">
                     <li class="nav-item">
-                       <input  style="margin-top: 5%" type="text" value="${keyword }" name ="keyword">
+                       <input style="padding: 0 1em; border: 0; height: 38px; width: 100%; border-radius: 30px;" size="50" type="text" value="${keyword }" name ="keyword">
                     </li>
                 </ul>
                 <ul class="navbar-nav">
