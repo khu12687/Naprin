@@ -5,30 +5,13 @@
 <head>
 <jsp:include page="./include/header.jsp"></jsp:include>
 <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
-<style>
-
-.deleteBtn{
-	background-color: #1567F9;  
-	border-radius: 5px; 
-	margin-left: 2%; 
-	color: white;
-	cursor: pointer;
-}
-#add_image{
-	background-color: #1567F9;  
-	border-radius: 5px; 
-	margin-left: 2%; 
-	color: white;
-	cursor: pointer;
-}
-</style>
 <script>
 	$(document).ready(function() {	
 		CKEDITOR.replace( 'content' );
 		$("#add_image").click(function() {
 			const div = $("<div>").addClass("mb-3");
 			const label = $("<label>").addClass("form-label").text("파일 첨부");
-			const button = $("<span>").addClass("deleteBtn").text("삭제");
+			const button = $("<span>").addClass("btn btn-outline-danger btn-sm").text("삭제");
 			const file = $("<input>").attr("type", "file").attr("name", "knowinImg").addClass("form-control");
 			
 			div.append(label);
@@ -59,11 +42,11 @@
 				<textarea name="content"></textarea>
 		 	</div>
 		 	<div class="mb-3"> 
-				<label class="form-label">파일 첨부</label><span id="add_image">추가</span>
+				<label class="form-label">파일 첨부</label><span id="add_image" class="btn btn-outline-primary btn-sm">추가</span>
 		 		<input type="file" name="knowinImg" class="form-control">
 		 	</div>
 			<div style="float: right;">
-			 	<button>작성</button>
+			 	<button class="btn btn-primary">작성</button>
 			 	<a href="../">작성취소</a>
 			</div>
 		</form>

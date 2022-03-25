@@ -46,8 +46,8 @@ public class ApiSearchController {
 	     }
 
 	     String apiURL = "	https://openapi.naver.com/v1/search/image?query=" + text;    // json 결과
-	     String apiURLNews = "https://openapi.naver.com/v1/search/news.json?query=" + text;    // json 결과
-	     String apiURLEncyc = "https://openapi.naver.com/v1/search/encyc.json?query=" + text;    // json 결과
+	     String apiURLNews = "https://openapi.naver.com/v1/search/news.json?display=5&query=" + text;    // json 결과
+	     String apiURLEncyc = "https://openapi.naver.com/v1/search/encyc.json?display=5&query=" + text;    // json 결과
 
 	     Map<String, String> requestHeaders = new HashMap<>();
 	     requestHeaders.put("X-Naver-Client-Id", clientId);

@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="/resources/css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -13,22 +16,13 @@ a{
 	color: blue;
 }
 
-button {
-  background-color: #1567F9;
-  width: 50px;
-  height: 20px;
-  color: skyblue;
-  border: 1px soild skyblue;
-  border-radius: 12px;
-  cursor: pointer;
-  padding: 5px;
-}
-
 .nav{
-	width: 50%;
-	margin: 10%;
-	border : 1px solid gray;
+	width: 1250px;
+	margin: 7%;
+	margin-left: 9.5%;
+	border : 1px solid #EBEBEB;
 	border-radius: 8px;
+	overflow: hidden;
 }
 
 input[type=button] {
@@ -52,7 +46,7 @@ input[type=button]:hover {
 	list-style: none;
 	color: black;
 	text-decoration: none;
-	font-family: sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 header {
   display: block;
@@ -77,8 +71,8 @@ header ul {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/resources/css/images/logo1.png" alt="" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
-                <strong style="margin-right: 3%;"><a class="main" href="/">NAPRIN</a></strong>
+                <img src="/resources/css/images/naprinLogo.png" alt="" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
+                <strong style="margin-right: 3%;"><a style="color: #0C43BE;" href="/">NAPRIN</a></strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -86,7 +80,9 @@ header ul {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-0 mb-lg-0">
                     <li class="nav-item">
-                       <input style="padding: 0 1em; border: 0; height: 38px; width: 100%; border-radius: 30px;" size="50" type="text" value="${keyword }" name ="keyword">
+                    	<form>                    	
+                       		<input style="padding: 0 1em; border: 1px solid gray; height: 38px; width: 100%; border-radius: 30px;" size="50" type="text" value="${keyword }" name ="keyword">
+                    	</form>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -97,7 +93,7 @@ header ul {
                        	<a class="nav-link" href="member/regist">회원가입</a>
                     </li>
                     <li class="nav-item">
-				    	 <a class="nav-link" href="servepage/login">로그인</a>
+				    	 <a class="nav-link" href="member/login">로그인</a>
                     </li>
 
                 </ul>
