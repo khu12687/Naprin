@@ -14,7 +14,7 @@
     <link rel="stylesheet" type= "text/css" href="resources/css/main.css">
 </head>
   <title>NAPRIN</title>
-</head>
+
 <body>
   <div>
     <ul class="nav">
@@ -27,11 +27,9 @@
   </h1>
   <form action="search">
     <div class="search">
-      <div class ="search-box">
-      <input type="search" name="keyword" placeholder="검색어를 검색해 주세요" >
-     </div>
-
-     <img src="resources/css/images/logo1.png" class="mlogo">
+		<div class ="search-box">
+			 <input id="search_box" type="search" name="keyword" placeholder="검색어를 검색해 주세요">
+		</div>
 
     
      <div class="icon-images">

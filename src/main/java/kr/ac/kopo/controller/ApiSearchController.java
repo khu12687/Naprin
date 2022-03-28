@@ -80,7 +80,23 @@ public class ApiSearchController {
 		}
 	     
 		List<Knowin> list =  service.list();
-		
+		for(int i =0; i<list.size(); i++) {			
+			if(list.get(i).getImages() == null) {
+				System.out.println("하하하하");
+				i++;
+			}else {			
+				//안찍힘 이미지가 다 널들어가있음. 메퍼에서 resultmap collection 확인하기
+				for(int j =0; j<list.get(i).getImages().size(); j++) {		
+					if(list.get(i).getImages().get(j) == null) {
+						System.out.println("하하");
+						j++;
+					}else {									
+						System.out.println(list.get(i).getImages().get(j).getFilename());
+						System.out.println("허허");
+					}
+				}
+			}
+		}
 		model.addAttribute("keyword",keyword);
 		model.addAttribute("list",list);
 		

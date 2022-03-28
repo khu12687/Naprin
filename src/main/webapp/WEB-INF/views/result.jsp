@@ -48,15 +48,20 @@
 			
 			<div>
 				<table class="table table-hover">
-					<c:forEach var="item" items="${list}">
+					<c:forEach var="item" items="${list}" >
 						<tr>
 							
 							<td>
 								<a class="navbar-brand" style="font-size: 20px;">								
 									<img class="d-inline-block align-text-top" alt="질문" src="/resources/css/images/naprinLogo.png" width="20px;" height="20px;">
-									<strong><a  href="view/${item.knowId}" style="color: #0C43BE;">${item.title}</a></strong>
+									<!-- view.jsp 답변등록 페이지 만들기 -->
+									<strong><a  href="knowIn/view/${item.knowId}" style="color: #0C43BE;">${item.title}</a></strong>
 								</a>
-								 ${item.content}
+								 <span>${item.content}</span>
+								 
+								 <c:forEach var="img" items="${item.images}">
+									<a href="javascript:alert('${img.uuid }')">uuid</a>
+								</c:forEach>
 								 <span style="font-size: 9px;">${item.regdate}  조회수: ${item.hit} </span>
 							</td>
 

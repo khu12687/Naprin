@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<jsp:include page="./include/header.jsp"></jsp:include>
+<jsp:include page="../include/header.jsp"></jsp:include>
 <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
 <script>
 	$(document).ready(function() {	
@@ -52,5 +52,5 @@
 		</form>
 	</div>
 </body>
-<jsp:include page="./include/body.jsp"></jsp:include>
+<jsp:include page="../include/body.jsp"></jsp:include>
 </html>

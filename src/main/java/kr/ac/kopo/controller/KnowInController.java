@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,12 +24,14 @@ public class KnowInController {
 	@Autowired
 	KnowinService service;
 	
+	final String path = "/knowIn/";
+	
 	@GetMapping("/add")
 	public String add(Model model, String keyword) {
 		
 		model.addAttribute("keyword",keyword);
 		
-		return "knowIn";
+		return path + "add";
 	}
 	
 	@PostMapping("/add")
@@ -47,5 +50,11 @@ public class KnowInController {
 		}
 		
 		return "redirect:../";
+	}
+	
+	@GetMapping("/view/{knowId}")
+	public String view(@PathVariable int knowId) {
+		
+		return path + "view";
 	}
 }
