@@ -25,13 +25,13 @@
   <h1>
     <div class="logo">NAPRIN</div>
   </h1>
-  <form action="search">
+<form action="search">
     <div class="search">
-      <div class ="search-box">
+     
       <input type="search" name="keyword" placeholder="검색어를 검색해 주세요" >
-     </div>
-
-     <img src="resources/css/images/logo1.png" class="mlogo">
+     
+     
+     
 
     
      <div class="icon-images">
