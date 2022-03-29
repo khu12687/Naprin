@@ -25,14 +25,16 @@
   <h1>
     <div class="logo">NAPRIN</div>
   </h1>
-<form action="search">
+  <form action="search">
     <div class="search">
-     
       <input type="search" name="keyword" placeholder="검색어를 검색해 주세요" >
-     
-     
-     
-
+ 
+          <div class="keyw">
+		<container class = "rel_search">
+   		 <ul class="pop_rel_keywords">
+   		 </ul>
+		</container>
+      </div>
     
      <div class="icon-images">
        <div><div><a href=""><img src="resources/css/images/covid.png" class="icon-image"></a></div><h4>covid19</h4></div>
