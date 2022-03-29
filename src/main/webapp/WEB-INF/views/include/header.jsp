@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/resources/css/style.css">
+<link rel="shortcut icon" href="/resources/css/images/naprinLogo.png" />
 <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +47,7 @@ input[type=button]:hover {
 	color: black;
 	text-decoration: none;
 	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18px;
 }
 header {
   display: block;

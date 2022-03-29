@@ -20,9 +20,9 @@ public class KnowInserviceImpl implements KnowinService{
 	@Autowired
 	KnowinImgDao knowinImgDao;
 	
-	public List<Knowin> list(){
+	public List<Knowin> list(String keyword){
 		
-		return dao.list();
+		return dao.list(keyword);
 	}
 	
 	@Override

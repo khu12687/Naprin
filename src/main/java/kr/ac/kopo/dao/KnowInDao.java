@@ -10,6 +10,6 @@ public interface KnowInDao {
 
 	void add(Knowin item);
 
-	List<Knowin> list();
+	List<Knowin> list(String keyword);
 	
 }

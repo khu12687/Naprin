@@ -10,5 +10,5 @@ public interface KnowinService {
 
 	void add(Knowin item);
 	
-	List<Knowin> list();
+	List<Knowin> list(String keyword);
 }

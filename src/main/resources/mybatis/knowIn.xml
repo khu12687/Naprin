@@ -4,7 +4,15 @@
 <mapper namespace="knowIn">
 	
 	<select id="list" resultMap="KnowinMap">
-		SELECT * FROM knowin
+		SELECT knowin.*,
+			knowin_img.knowinImg_id knowinImg,
+			knowin_img.know_id know_id,
+			knowin_img.filename filename,
+			knowin_img.uuid uuid
+		FROM knowin
+		JOIN knowin_img ON knowin.know_id = knowin_img.know_id
+		WHERE knowin.title LIKE CONCAT(CONCAT('%', #{keyword}), '%') or knowin.content LIKE CONCAT(CONCAT('%', #{keyword}), '%');
+		
 	</select>
 	
 	<insert id="add">

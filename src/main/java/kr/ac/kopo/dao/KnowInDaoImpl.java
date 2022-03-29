@@ -27,9 +27,9 @@ public class KnowInDaoImpl implements KnowInDao{
 	}
 
 	@Override
-	public List<Knowin> list() {
+	public List<Knowin> list(String keyword) {
 
-		return sql.selectList("knowIn.list");
+		return sql.selectList("knowIn.list", keyword);
 	}
 
 
